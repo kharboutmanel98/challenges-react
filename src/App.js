@@ -13,19 +13,21 @@ function App() {
    
 
      {/* POSTS & SIDE MENU CONTAINER */}
-    <div style={{display: "flex"}}>
+    <div style={{display: "flex", width:"60%", justifyContent:"center"}}>
+
+
          {/* POSTS CONTAINER  */}
       <div style={{width: "70%" }}>
+            <Post postName= "Pingucoder" postBody="platform e learning"/>
+            <Post postName= "Learn React" postBody="with pingucoder"/>
+            <Post postName= "Learn ExpressJs" postBody="with pingucoder"/>
+            <Post postName= "Learn Angular" postBody="with pingucoder"/>
             <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            
             </div>
          {/* POSTS CONTAINER  */}
          {/* SIDE MENU CONTAINER */}
-         <div style={{width: "30%"}}>
+         <div style={{width: "30%", marginTop:"25px"}}>
           <SideMenu />
          </div>
          {/* SIDE MENU CONTAINER */}

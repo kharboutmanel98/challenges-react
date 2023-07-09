@@ -1,11 +1,11 @@
 import TagButton from "./TagButton"
 
-function Post() {
+function Post({postName= "no Title", postBody="no body"}) {
   return (
     <div style={{padding: "10px", border: "solid #1d9bf0 5px" , margin: "25px"}}>
-        <h2>this is the post tile</h2>
+        <h2>{postName}</h2>
         <hr />
-        <p> Lorem ipsum dolor sit, ame const add elit, ki</p>
+        <p> {postBody}</p>
         <TagButton />
     </div>
   )
