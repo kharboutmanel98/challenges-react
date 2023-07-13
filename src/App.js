@@ -1,7 +1,7 @@
 
 import './App.css';
-import Header from './Header';
-import MyButton from './MyButton';
+import Input from './Input';
+
 
 
 function App() {
@@ -9,8 +9,9 @@ function App() {
   
   return (
     <div className="App">
-      <Header />
-       <MyButton />
+      <>
+      <Input />
+      </>
     </div>
   );
 }
