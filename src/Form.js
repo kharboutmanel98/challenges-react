@@ -6,25 +6,39 @@ function Form() {
     // const [emailInput, setEmailInput]=useState("");
   const [formInputs, setFormInputs]= useState({
     name: "",
-    email: ""
+    email: "",
+    age:""
+    
   })
   return (
     <form onSubmit={(event)=>{
         event.preventDefault()
-        console.log(formInputs, setFormInputs)
+        console.log(formInputs)
     }}>
 
         <label>name:</label>
-        <input value={formInputs.name} onChange={(event) => setFormInputs({ name:event.target.value})}/>
+        <input value={formInputs.name} onChange={(event) => {
+          // const newFormInput = {...formInputs};
+          // newFormInput.email = event.target.value
+          // setFormInputs(newFormInput)} 
+          setFormInputs({...formInputs, name: event.target.value})
+        } }
+        />
         <hr />
-        {/* <input value={nameInput} onChange={(event) => {setNameInput(event.target.value)}}/>
-        <hr /> */}
+        
 
         <label>email:</label>
-        <input value={formInputs.email} onChange={(event) => setFormInputs({ email:event.target.value})} />
+        <input value={formInputs.email} onChange={(event) => 
+          setFormInputs({...formInputs, email: event.target.value})
+          }
+           />
         <hr />
-        {/* <input value={emailInput} onChange={(event) => {setEmailInput(event.target.value)}}/>
-        <hr /> */}
+
+        <label>age:</label>
+        <input value={formInputs.age} onChange={(event) =>
+         setFormInputs({...formInputs, age: event.target.value})} />
+        <hr />
+       
 
         <button>submit</button>
         
