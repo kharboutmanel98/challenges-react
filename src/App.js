@@ -1,7 +1,6 @@
 
 import './App.css';
-import Form from './Form';
-// import Input from './Input';
+import Scoreboard from "./Scoreboard"
 
 
 
@@ -13,7 +12,8 @@ function App() {
       paddingTop: "100px"
     }}>
       <>
-      <Form />
+      {/* <Form /> */}
+      <Scoreboard />
       </>
     </div>
   );
