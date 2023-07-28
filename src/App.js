@@ -15,23 +15,44 @@ const [devices, setDevices] = useState([
   ])
 
 const devicesList = devices.map((device) => {
-  return <li key={device.id}>{device.name} <button onClick={() => { handleDeleteClick(device.id) }}>Delete</button></li>
+  return (
+  <li key={device.id}>
+  {device.name} 
+  <button
+   onClick={() => {
+     handleDeleteClick(device.id) 
+     }}
+     >
+     Delete
+  </button>
+
+  <button
+   onClick={() => {
+     handleEditClick(device.id) 
+     }}
+     >
+     Edit
+  </button>
+  </li>
+  );
 });
+
+
+function handleEditClick(id) {
+  const newDevices = devices.map((device)=> {
+    if(device.id == id) {
+    let newDevice = {...device, name: device.name + "😎😎"}
+    return newDevice;
+    } else {
+      return device;
+    }
+  });
+  setDevices(newDevices);
+  }
 
 
 
 function handleDeleteClick(id) {
-//   const newDevices = [...devices]
-//   let index =0;
-//   let selectedIndex = 0;
-//   for(let device of newDevices) {
-//     if(device.id == id) {
-//       selectedIndex = index
-//     }
-//     index++;
-//   }
-// }
-// newDevices.splice(selectedIndex, 1)
 
 const newDevices = devices.filter((device)=> {
   return device.id !== id
